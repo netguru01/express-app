@@ -8,14 +8,22 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/send', function (req, res, next) {
+
+	var sendEmail = function(somedata){
+	  	var smtpConfig = {
+	    host: 'smtp.gmail.com',
+	    port: 465,
+	    secure: true, // use SSL, 
+	                  // you can try with TLS, but port is then 587
+	    auth: {
+	      user: 'amostvee@gmail.com', // Your email id
+	      pass: 'Success12#' // Your password
+	    }
+  };
+
 	// body...
-	var transporter = nodemailer.createTransport({
-		service: 'Gmail',
-		auth: {
-			user: 'amostvee@gmail.com',
-			pass: 'Success12#'
-		}
-	});
+	var transporter = nodemailer.createTransport(smtpConfig);
+	
 	var mailOptions = {
 		from: 'Amos TV <amostvee@gmail.com>',
 		to: 'slankeyinc@gmail.com',
