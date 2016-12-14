@@ -1,0 +1,20 @@
+body {
+  padding-top: 50px;
+}
+
+.jumbotron {
+	background: url(../images/bgimg.jpg) no-repeat;
+}
+
+.jumbotron p {
+	color: #ddd;
+}
+
+footer {
+	background: #f4f4f4;
+	text-align: center;
+	height: 40px;
+	margin-top: 30px;
+	padding-top: 10px;
+	overflow: auto;
+}
