@@ -12,12 +12,12 @@ router.post('/send', function (req, res, next) {
 	var smtpTransport = nodemailer.createTransport('SMTP', {
 		service: 'Gmail',
 		auth: {
-			user: 'amostvee@gmail.com',
-			pass: 'Success12#'
+			user: 'fsxlogic@gmail.com',
+			pass: 'emma198075'
 		}
 	});
 	var mailOptions = {
-		from: 'Amos TVEE <amostvee@gmail.com>',
+		from: 'Fastex Logistics <fsxlogic@gmail.com>',
 		to: 'slankeyinc@gmail.com',
 		subject: 'Contact Us Form Submission',
 		text: 'You got a new contact form filled with the following details... Name: ' + req.body.name + ' Email ' + req.body.email + ' Message ' + req.body.message,
